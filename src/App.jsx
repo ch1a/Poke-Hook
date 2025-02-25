@@ -6,7 +6,14 @@ function App() {
   return (
     <div className="App">
       <h1>Pokedex App</h1>
-      <PokemonList />
+      {selectedPokemon ? (
+        <PokemonDetail
+          pokemon={selectedPokemon}
+          onBack={() => setSelectedPokemon(null)}
+        />
+      ) : (
+        <PokemonList onSelectPokemon={setSelectedPokemon} />
+      )}
     </div>
   );
 }

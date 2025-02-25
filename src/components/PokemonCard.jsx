@@ -7,6 +7,9 @@ const PokemonCard = ({ name, url }) => {
   /* const url = (double declaration */ useEffect(() => {
     const fetchPokemonDetails = async () => {
       const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       const data = await response.json();
       setPokemonDetails(data);
     };
@@ -19,7 +22,7 @@ const PokemonCard = ({ name, url }) => {
   }
 
   return (
-    <div className="pokemon-card">
+    <div className="pokemon-card" onClick={() => onSelect(pokemonDetails)}>
       <h2>{name}</h2>
       <img
         src={pokemonDetails.sprites.front_default}

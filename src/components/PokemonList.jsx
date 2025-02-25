@@ -25,7 +25,12 @@ const PokemonList = () => {
   return (
     <div className="pokemon-list">
       {pokemonList.map((pokemon, index) => (
-        <PokemonCard key={index} name={pokemon.name} url={pokemon.url} />
+        <PokemonCard
+          key={index}
+          name={pokemon.name}
+          url={pokemon.url}
+          onSelect={onSelectPokemon}
+        />
       ))}
     </div>
   );
