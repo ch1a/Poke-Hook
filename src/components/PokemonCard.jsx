@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const PokemonCard = ({ name, url }) => {
+const PokemonCard = ({ name, url, onSelect }) => {
   const [pokemonDetails, setPokemonDetails] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -24,6 +24,7 @@ const PokemonCard = ({ name, url }) => {
   return (
     <div className="pokemon-card" onClick={() => onSelect(pokemonDetails)}>
       <h2>{name}</h2>
+
       <img
         src={pokemonDetails.sprites.front_default}
         alt={name}
@@ -32,6 +33,7 @@ const PokemonCard = ({ name, url }) => {
       <p>Type: {pokemonDetails.types[0].type.name}</p>
       <p>Height: {pokemonDetails.height}</p>
       <p>Weight: {pokemonDetails.weight}</p>
+      <p>Click to view details</p>
     </div>
   );
 };

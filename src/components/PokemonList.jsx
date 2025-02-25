@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PokemonCard from "./PokemonCard";
 
-const PokemonList = () => {
+const PokemonList = ({ onSelectPokemon }) => {
   const [pokemonList, setPokemonList] = useState([]);
   const [loading, setLoading] = useState(true);
 
