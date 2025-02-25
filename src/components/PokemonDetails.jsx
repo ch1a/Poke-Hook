@@ -16,6 +16,12 @@ const PokemonDetails = ({ pokemon, onBack }) => {
       <p>Height: {pokemon.height}</p>
       <p>Weight: {pokemon.weight}</p>
       <p>Base Experience: {pokemon.base_experience}</p>
+      <p>
+        {" "}
+        Abilities:{" "}
+        {pokemon.abilities.map((ability) => ability.ability.name).join(", ")}
+      </p>
+      <p>Moves: {pokemon.moves.length}</p>
     </div>
   );
 };
