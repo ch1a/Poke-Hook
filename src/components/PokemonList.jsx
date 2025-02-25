@@ -23,7 +23,7 @@ const PokemonList = ({ onSelectPokemon }) => {
   }
 
   return (
-    <div className="pokemon-list">
+    <div className="pokemon-list pokemon-grid">
       {pokemonList.map((pokemon, index) => (
         <PokemonCard
           key={index}

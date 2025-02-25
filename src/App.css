@@ -40,3 +40,48 @@
 .read-the-docs {
   color: #888;
 }
+
+.pokemon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+}
+.pokemon-card {
+  margin: 20px;
+  padding: 10px;
+  background-color: rgb(99, 97, 85);
+  border-radius: 15px;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+}
+
+#Poke-Type {
+  font-weight: bold;
+  color: rgba(56, 3, 170, 0.849);
+  background-color: aliceblue;
+  border-radius: 15px;
+  margin: 0px 2px 0px 60px;
+  padding: 5px 5px 5px 5px;
+  width: 60%;
+}
+.pokemon-detail {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+}
+.pokemon-detail,
+p {
+  font-size: 20px;
+}
+
+#Card-Title {
+  font-size: 40px;
+}
+#card-img {
+  height: 20rem;
+  width: 20rem;
+}

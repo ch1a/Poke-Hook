@@ -31,9 +31,6 @@ const PokemonCard = ({ name, url, onSelect }) => {
         style={{ width: "100px", height: "100px" }}
       />
       <p>Type: {pokemonDetails.types[0].type.name}</p>
-      <p>Height: {pokemonDetails.height}</p>
-      <p>Weight: {pokemonDetails.weight}</p>
-      <p>Click to view details</p>
     </div>
   );
 };
